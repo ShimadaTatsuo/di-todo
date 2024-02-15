@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "gen:tsr": "tsr generate",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
