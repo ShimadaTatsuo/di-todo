@@ -6,12 +6,17 @@ on:
       - main
   pull_request:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   test:
+    name: lint & unit test
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        node-version: ["18", "lts/*"]
+
     steps:
       - uses: actions/checkout@v3
 
@@ -24,6 +29,6 @@ jobs:
 
       - name: run lint
         run: npm run lint
-        
+
       - name: run unit test
         run: yarn test:run
