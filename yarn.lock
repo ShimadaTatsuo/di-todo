@@ -615,11 +615,11 @@
     use-sync-external-store "^1.2.0"
 
 "@tanstack/router-cli@^1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-cli/-/router-cli-1.16.1.tgz#af2c63c77bc96702d59c6596b951b1c60273fe58"
-  integrity sha512-YWpaSM3FWB+qfgiZWIPS50AvM3d1mRTGk2KZsyG5jXken/8Rftvn74+tGbJTdKrzosYrojV84GvQYRNmzI/9EQ==
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-cli/-/router-cli-1.16.3.tgz#69c7273c7d6741d6638eaa48751e89c08c8cd57d"
+  integrity sha512-yBmInLkR8v4IYFQ0r57v68wVOo9cKCJTCPORk1M58lvHK+XPSLLL0eSKHzS7OTmOfwEeGSKCQ1o4TNP8LoSXEw==
   dependencies:
-    "@tanstack/router-generator" "1.16.1"
+    "@tanstack/router-generator" "1.16.3"
     chokidar "^3.5.3"
     yargs "^17.6.2"
 
@@ -635,6 +635,14 @@
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.16.1.tgz#2ae954827aaac91e7831eaf16fef8b349e723da7"
   integrity sha512-OXTQ5I1cxpusP8TytWWFRemQQtKF6APZpTUmBuLTSuVxYl7306WbN2zEAafIYSF8nzlUGgig7eZjsvZM1bG2oA==
+  dependencies:
+    prettier "^3.1.1"
+    zod "^3.22.4"
+
+"@tanstack/router-generator@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.16.3.tgz#e8730f4d9292ca8417c137025a4f007753d67ca9"
+  integrity sha512-S3cO7bUtWnbMKVuC6nVcx4TpE1n98aCXQ3xhPtiZr5dgtIxIQFN+O62H0M1UJi1kkDPQ37dJoXzupXLxW1aexw==
   dependencies:
     prettier "^3.1.1"
     zod "^3.22.4"
