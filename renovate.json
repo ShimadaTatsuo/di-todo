@@ -14,8 +14,18 @@
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "major": { "labels": ["renovate", "update_major"] },
-  "matchUpdateTypes": ["patch"],
-  "automerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint",
+      "automerge": true
+    }
+  ],
   "platformAutomerge": true,
   "ignoreDeps": ["react"]
 }
