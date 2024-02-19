@@ -1,4 +1,4 @@
-name: test
+name: build
 
 on:
   push:
@@ -14,8 +14,8 @@ env:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
 jobs:
-  test:
-    name: lint & unit test
+  lint_test_build:
+    name: lint test build
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -47,6 +47,9 @@ jobs:
       - name: run unit test
         run: yarn test:run
 
+      - name: run production build
+        run: yarn build
+
       #-- Slack通知 --#
       - name: slack notification on success
         uses: rtCamp/action-slack-notify@v2
@@ -54,7 +57,7 @@ jobs:
         env:
           SLACK_TITLE: Deploy / Success
           SLACK_COLOR: good
-          SLACK_MESSAGE: デプロイ完了しました
+          SLACK_MESSAGE: テスト完了しました
 
       - name: slack notification on failure
         uses: rtCamp/action-slack-notify@v2
@@ -62,4 +65,4 @@ jobs:
         env:
           SLACK_TITLE: Deploy / Failure
           SLACK_COLOR: danger
-          SLACK_MESSAGE: デプロイ失敗しました
+          SLACK_MESSAGE: テスト失敗しました
