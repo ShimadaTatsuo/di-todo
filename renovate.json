@@ -16,6 +16,12 @@
   "major": { "labels": ["renovate", "update_major"] },
   "packageRules": [
     {
+      "groupName": "node-js",
+      "matchDepNames": ["node"],
+      "matchPackagePatterns": ["/node$"],
+      "versioning": "node"
+    },
+    {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     },
