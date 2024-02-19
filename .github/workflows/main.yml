@@ -8,6 +8,11 @@ on:
     branches:
       - "**"
 
+env:
+  SLACK_USERNAME: DeployBot
+  SLACK_ICON: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
 jobs:
   test:
     name: lint & unit test
@@ -41,3 +46,20 @@ jobs:
 
       - name: run unit test
         run: yarn test:run
+
+      #-- Slack通知 --#
+      - name: slack notification on success
+        uses: rtCamp/action-slack-notify@v2
+        if: ${{ success() }}
+        env:
+          SLACK_TITLE: Deploy / Success
+          SLACK_COLOR: good
+          SLACK_MESSAGE: デプロイ完了しました
+
+      - name: slack notification on failure
+        uses: rtCamp/action-slack-notify@v2
+        if: ${{ failure() }}
+        env:
+          SLACK_TITLE: Deploy / Failure
+          SLACK_COLOR: danger
+          SLACK_MESSAGE: デプロイ失敗しました
