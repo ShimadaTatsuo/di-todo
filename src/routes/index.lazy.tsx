@@ -1,5 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import { fetchClient } from "../utils/fetchClient";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -8,18 +9,12 @@ export const Route = createLazyFileRoute("/")({
 function Index() {
   setDocumentTitle();
 
-  const clickCreateUser = () => {
-    fetch("http://localhost:3000/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: 3,
-        firstName: "firstName3",
-        lastName: "lastName3",
-        isActive: true,
-      }),
+  const clickCreateUser = async () => {
+    await fetchClient("POST", "/users", {
+      id: 4,
+      firstName: "firstName4",
+      lastName: "lastName4",
+      isActive: true,
     });
   };
 
