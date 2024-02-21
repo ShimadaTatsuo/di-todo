@@ -8,9 +8,25 @@ export const Route = createLazyFileRoute("/")({
 function Index() {
   setDocumentTitle();
 
+  const clickCreateUser = () => {
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: 3,
+        firstName: "firstName3",
+        lastName: "lastName3",
+        isActive: true,
+      }),
+    });
+  };
+
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
+    <div>
+      <h3 style={{ color: "red" }}>Welcome Home!</h3>
+      <button onClick={clickCreateUser}>create user</button>
     </div>
   );
 }
