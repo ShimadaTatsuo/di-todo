@@ -11,7 +11,6 @@ function Index() {
 
   const clickCreateUser = async () => {
     await fetchClient("POST", "/users", {
-      id: 4,
       firstName: "firstName4",
       lastName: "lastName4",
       isActive: true,
