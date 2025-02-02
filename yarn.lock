@@ -1241,7 +1241,7 @@
   dependencies:
     "@babel/core" "^7.23.9"
 
-"@vanilla-extract/compiler@^0.1.0":
+"@vanilla-extract/compiler@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/compiler/-/compiler-0.1.1.tgz#9b48b9459a876569edf23d24d9ae96d8c982b554"
   integrity sha512-OJk31hrDZlDKP7K3Yr5y731Wrm1vf7fNyM5eXjfGyDovZLcVAFuB8tt7pXqpdCz0RnrKsMzlvJD3f6WT2MaIug==
@@ -1290,12 +1290,12 @@
   resolved "https://registry.yarnpkg.com/@vanilla-extract/private/-/private-1.0.6.tgz#f10bbf3189f7b827d0bd7f804a6219dd03ddbdd4"
   integrity sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==
 
-"@vanilla-extract/vite-plugin@^4.0.4":
-  version "4.0.20"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/vite-plugin/-/vite-plugin-4.0.20.tgz#51cdc2ac9210120a7bda81645939ec577f3a3d5b"
-  integrity sha512-IAK0oa+az95NxDQ0ooQ9QKV/mG7EdLYnc2ANRSzJPO81lu3K5Hw//VYNUiUGuKNigU13jCCoII7S0wVk6W/fVw==
+"@vanilla-extract/vite-plugin@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/vite-plugin/-/vite-plugin-5.0.0.tgz#d3e004989036d34c0f55bf7cee69c5524d67ee86"
+  integrity sha512-ZbdxalIUZicTjXcFFcZV56aCixvkPZE8M9mUwa2nDCdpVo/BKuCPt08LvU5aNwZRDkuPOiaaPHcmw/+xxdM15A==
   dependencies:
-    "@vanilla-extract/compiler" "^0.1.0"
+    "@vanilla-extract/compiler" "^0.1.1"
     "@vanilla-extract/integration" "^8.0.0"
 
 "@vitejs/plugin-react-swc@^3.5.0":
