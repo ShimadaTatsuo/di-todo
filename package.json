@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.18.3"
+    "node": "20.19.0"
   },
   "scripts": {
     "dev": "vite --port=3001 && tsr watch",
